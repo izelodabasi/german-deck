@@ -1,0 +1,14 @@
+progress.db
+*.db-journal
+*.db-wal
+*.db-shm
+__pycache__/
+.venv/
+.env
+.env.*
+!.env.example
+
+.DS_Store
+data/cards.json
+*.apkg
+vocab/*.pdf

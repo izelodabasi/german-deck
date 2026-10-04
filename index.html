@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>German Deck Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Goethe A1-B1</p>
+          <h1>German Deck Trainer</h1>
+        </div>
+        <div class="summary" aria-label="Study progress">
+          <span><strong id="totalCards">0</strong> cards</span>
+          <span><strong id="seenCards">0</strong> seen</span>
+          <span><strong id="accuracy">0%</strong> correct</span>
+        </div>
+      </header>
+
+      <section class="study">
+        <div class="card-shell" aria-live="polite">
+          <div class="card-label">Front</div>
+          <div id="front" class="front">Loading deck...</div>
+          <div id="answerPanel" class="answer hidden">
+            <div class="card-label">Back</div>
+            <div id="back" class="back"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="showAnswer" class="primary" type="button">Show answer</button>
+          <button id="wrong" class="danger hidden" type="button">False</button>
+          <button id="correct" class="success hidden" type="button">True</button>
+        </div>
+
+        <div class="hint">
+          <span><kbd>Space</kbd> show answer</span>
+          <span><kbd>1</kbd> false</span>
+          <span><kbd>2</kbd> true</span>
+        </div>
+      </section>
+
+      <aside class="details">
+        <h2>Current card</h2>
+        <dl>
+          <div><dt>Shown</dt><dd id="cardShown">0</dd></div>
+          <div><dt>True</dt><dd id="cardTrue">0</dd></div>
+          <div><dt>False</dt><dd id="cardFalse">0</dd></div>
+          <div><dt>Last shown</dt><dd id="lastShown">Never</dd></div>
+          <div><dt>Last correct</dt><dd id="lastCorrect">Never</dd></div>
+        </dl>
+        <button id="resetProgress" class="ghost" type="button">Reset progress</button>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
